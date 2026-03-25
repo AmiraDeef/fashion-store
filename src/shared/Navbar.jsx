@@ -5,7 +5,9 @@ export const Navbar = () => {
   return (
     <>
       <header className="fixed-top">
-        <div className="discount text-white bg-danger p-2 small text-center fw-bold pt-2 ">
+       
+        <div className="discount text-white bg-danger p-2 small text-center fw-bold pt-2 position-relative">
+          <div className="d-flex align-items-center justify-content-center flex-grow-1">
           <i className="bi bi-percent fs-6 px-2"></i>
           <span>30% OFF storewide -- limited time! </span>
           <Link
@@ -15,6 +17,8 @@ export const Navbar = () => {
             shop now
             <i className="bi bi-arrow-right fs-5 ps-2 "></i>
           </Link>
+           </div>
+          <button type="button" className="btn-close btn-close-white position-absolute end-0 top-50 translate-middle-y me-3" aria-label="Close"></button>
         </div>
 
         <nav className="navbar navbar-expand-lg bg-body-tertiary py-1">

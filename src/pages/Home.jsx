@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import cover from "../assets/cover1.jpg";
 import insta1 from "../assets/insta1.jpg";
+import winter from "../assets/winter.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css/pagination";
@@ -99,6 +100,54 @@ export const Home = () => {
           </SwiperSlide>
         </Swiper>
       </div>
+      <div className="bg-light " style={{height:"450px"}}>
+        <div className="row">
+          <div className="col-6 p-0">
+            <img src={winter} alt="" className=" w-100 object-fit-cover" style={{ height: "450px" ,display: "block"}}/>
+          </div>
+          <div className="col-6 d-flex flex-column justify-content-center align-items-start gap-3 p-5">
+            <h6 className="text-primary fw-medium fs-4 text-uppercase">sale up to 35% off</h6>
+            <h2 className="fw-semibold fs-1 text-capitalize">hunderds of new lower prices!</h2>
+            <h6 className="fs-4 fw-light text-uppercase">Hurry up!!! winter is comming !</h6>
+            <div className="">
+              <Link
+                to="/products"
+                className="text-dark text-decoration-underline fs-5 fw-bold d-inline-flex align-items-center ps-2"
+              >
+                shop now
+                <i className="bi bi-arrow-right fs-5 ps-2 "></i>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div className="container my-5">
+  <div className="text-center">
+    <h6 className="text-primary text-uppercase mb-4 fs-5">promotion</h6>
+    <h5 className="fw-semibold fs-1 text-capitalize mb-4">Winter Collection</h5>
+          <p className="fw-light fs-5 mb-4">introduction the new winter jackets</p>
+         
+<div className="row justify-content-center">
+ 
+    <div className="col-9 ">
+
+          <div className="ratio ratio-16x9 rounded-4 overflow-hidden ">
+            <iframe
+              src="https://www.youtube.com/embed/0Fi_arjVEfY?si=nyXdjjZzLXSKhPlx"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="rounded-4"
+            ></iframe>
+          </div>
+         </div>
+          </div>
+  </div>
+</div>
+
+
 
       <div className="instgram container py-5">
         <div className="text-center mb-4">
@@ -115,7 +164,7 @@ export const Home = () => {
         </div>
 
         <div className="row g-3 justify-content-center mb-5  gap-5">
-          <div className="col-3 "style={{ width: "18rem" }}>
+          <div className="col-3 " style={{ width: "18rem" }}>
             <img
               src={insta1}
               alt=""
@@ -144,36 +193,53 @@ export const Home = () => {
             />
           </div>
         </div>
-        <div className="d-flex flex-row flex-nowrap justify-content-center gap-4 align-items-center">
-          <div className="card border-0" style={{ width: "18rem" }}>
-            <div className="card-body d-flex flex-column pb-3">
-              <FontAwesomeIcon icon={faTruckMoving} className="fs-1 pb-3" />
-              <h5 className="card-title">Free Shipping</h5>
-              <p className="card-text text-muted small">quick example text</p>
-            </div>
-          </div>
-          <div className="card border-0" style={{ width: "18rem" }}>
-            <div className="card-body d-flex flex-column pb-3">
-              <FontAwesomeIcon icon={faTruckMoving} className="fs-1 pb-3" />
-              <h5 className="card-title">Free Shipping</h5>
-              <p className="card-text text-muted small">quick example text</p>
-            </div>
-          </div>
-          <div className="card border-0" style={{ width: "18rem" }}>
-            <div className="card-body d-flex flex-column pb-3">
-              <FontAwesomeIcon icon={faTruckMoving} className="fs-1 pb-3" />
-              <h5 className="card-title">Free Shipping</h5>
-              <p className="card-text text-muted small">quick example text</p>
-            </div>
-          </div>
-          <div className="card border-0" style={{ width: "18rem" }}>
-            <div className="card-body d-flex flex-column pb-3">
-              <FontAwesomeIcon icon={faTruckMoving} className="fs-1 pb-3" />
-              <h5 className="card-title">Free Shipping</h5>
-              <p className="card-text text-muted small">quick example text</p>
-            </div>
+       <div className="container-fluid  py-5">
+  <div className="container">
+    <div className="row g-4 justify-content-center">
+      
+      <div className="col-6 col-lg-3">
+        <div className="card border-0 bg-transparent h-100">
+          <div className="card-body d-flex flex-column align-items-start p-0">
+            <i className="bi bi-truck fs-1 mb-3"></i>
+            <h5 className="card-title fw-bold">Free Shipping</h5>
+            <p className="card-text text-muted small">Order above $200</p>
           </div>
         </div>
+      </div>
+
+      <div className="col-6 col-lg-3">
+        <div className="card border-0 bg-transparent h-100">
+          <div className="card-body d-flex flex-column align-items-start p-0">
+            <i className="bi bi-cash-stack fs-1 mb-3"></i>
+            <h5 className="card-title fw-bold">Money-back</h5>
+            <p className="card-text text-muted small">30 days guarantee</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-6 col-lg-3">
+        <div className="card border-0 bg-transparent h-100">
+          <div className="card-body d-flex flex-column align-items-start p-0">
+            <i className="bi bi-lock fs-1 mb-3"></i>
+            <h5 className="card-title fw-bold">Secure Payments</h5>
+            <p className="card-text text-muted small">Secured by Stripe</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-6 col-lg-3">
+        <div className="card border-0 bg-transparent h-100">
+          <div className="card-body d-flex flex-column align-items-start p-0">
+            <i className="bi bi-telephone fs-1 mb-3"></i>
+            <h5 className="card-title fw-bold">24/7 Support</h5>
+            <p className="card-text text-muted small">Phone and Email support</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
       </div>
     </>
   );
