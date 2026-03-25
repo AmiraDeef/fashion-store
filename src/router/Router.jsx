@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 // import { Products } from "../pages/Products";
-// import { Login } from "../pages/Login";
+import { Login } from "../pages/Login";
 import { Home } from "../pages/Home";
 // import { Register } from "../pages/Register";
 // import { SingleProduct } from "../pages/SingleProduct";
@@ -15,12 +15,20 @@ export const route = createBrowserRouter([
          index: true, 
         element: <Home/>
       },   
-    //   {path:'products' , element:<Products/>},
+            //   {path:'products' , element:<Products/>},
             // // http://localhost:5173/products/id
             // {path:'products/:id' , element:<SingleProduct/>},
-            // {path:"login" , element:<Login/>},
-            // {path:"register" , element:<Register/>}
-
-
+       
+            
         ]
-    }])
+    },
+
+    {
+        path: "/login",
+        element: <Login />
+    },
+    // {
+    //     path: "/register",
+    //     element: <Register />
+    // }
+])
