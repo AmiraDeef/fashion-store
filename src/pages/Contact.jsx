@@ -21,9 +21,9 @@ export const Contact = () => {
           >
             <ol className="breadcrumb">
               <li className="breadcrumb-item">
-                <a href="#" className="text-muted text-decoration-none">
+                <Link to="/" className="text-muted text-decoration-none">
                   Home
-                </a>
+                </Link>
               </li>
               <li
                 className="breadcrumb-item text-dark fw-normal  active"

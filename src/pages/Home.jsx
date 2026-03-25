@@ -21,12 +21,10 @@ import {
 export const Home = () => {
   return (
     <>
-      <div
-        className="bg-img position-relative d-flex align-items-center"
-        style={{
-          backgroundImage: `url(${cover})`,
-        }}
-      >
+     <div
+  className="bg-img pt-4 position-relative d-flex align-items-center overflow-hidden"
+  style={{ backgroundImage: `url(${cover})` }}
+>
         <div className="content-img text-content text-white position-absolute d-flex flex-column align-items-start gap-3 top-70 start-0 p-5 ">
           <h1 className="">Unveil your style </h1>
           <h1>
@@ -149,7 +147,7 @@ export const Home = () => {
 
 
 
-      <div className="instgram container py-5">
+      <div className="instgram container py-5 overflow-hidden">
         <div className="text-center mb-4">
           <p className=" text-muted mb-2 small fw-bold text-uppercase p-3">
             newsfeed
@@ -163,36 +161,21 @@ export const Home = () => {
           </p>
         </div>
 
-        <div className="row g-3 justify-content-center mb-5  gap-5">
-          <div className="col-3 " style={{ width: "18rem" }}>
-            <img
-              src={insta1}
-              alt=""
-              className="insta-post w-100 rounded-4 shadow-sm"
-            />
-          </div>
-          <div className="col-3" style={{ width: "18rem" }}>
-            <img
-              src={insta1}
-              alt=""
-              className="insta-post w-100 rounded-4 shadow-sm"
-            />
-          </div>
-          <div className="col-3 " style={{ width: "18rem" }}>
-            <img
-              src={insta1}
-              alt=""
-              className="insta-post w-100 rounded-4 shadow-sm"
-            />
-          </div>
-          <div className="col-3 " style={{ width: "18rem" }}>
-            <img
-              src={insta1}
-              alt=""
-              className="insta-post w-100 rounded-4 shadow-sm"
-            />
-          </div>
-        </div>
+        <div className="row g-4 justify-content-center mb-5">
+    
+    <div className="col-6 col-md-3">
+      <img src={insta1} alt="" className="w-100 rounded-4 shadow-sm object-fit-cover" style={{height: "300px"}} />
+    </div>
+    <div className="col-6 col-md-3">
+      <img src={insta1} alt="" className="w-100 rounded-4 shadow-sm object-fit-cover" style={{height: "300px"}} />
+    </div>
+    <div className="col-6 col-md-3">
+      <img src={insta1} alt="" className="w-100 rounded-4 shadow-sm object-fit-cover" style={{height: "300px"}} />
+    </div>
+    <div className="col-6 col-md-3">
+      <img src={insta1} alt="" className="w-100 rounded-4 shadow-sm object-fit-cover" style={{height: "300px"}} />
+    </div>
+  </div>
        <div className="container-fluid  py-5">
   <div className="container">
     <div className="row g-4 justify-content-center">

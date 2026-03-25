@@ -1,26 +1,22 @@
-
-.bg-img{
+.bg-img {
     width: 100%;
     background-size: cover;
     background-position: center;
-     top: 0;
-     left: 0;
-       margin-top: 80px;
-    /* background-image: url("./assets/frame1.png"); */
+    background-repeat: no-repeat;
+    margin-top: 80px;
     height: 600px;
-   
 }
-.content-img h1{
-   font-size: 80px;
-   font-weight: 600;
 
+.content-img h1 {
+    font-size: 80px;
+    font-weight: 600;
 }
-.content-img p{
+
+.content-img p {
     font-size: 20px;
     font-weight: 400;
     margin-top: 10px;
     line-height: 1.6;
-    
 }
 
 .mySwiper .swiper-pagination-bullet-active {
