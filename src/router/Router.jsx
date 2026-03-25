@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 // import { Products } from "../pages/Products";
 import { Login } from "../pages/Login";
 import { Home } from "../pages/Home";
-// import { Register } from "../pages/Register";
+import { Register } from "../pages/Register";
 // import { SingleProduct } from "../pages/SingleProduct";
 import { Layout } from "../layout/Layout";
 
@@ -27,8 +27,8 @@ export const route = createBrowserRouter([
         path: "/login",
         element: <Login />
     },
-    // {
-    //     path: "/register",
-    //     element: <Register />
-    // }
+    {
+        path: "/register",
+        element: <Register />
+    }
 ])

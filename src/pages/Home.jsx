@@ -52,7 +52,7 @@ export const Home = () => {
           modules={[Autoplay, Pagination]}
           pagination={{ clickable: true, dynamicBullets: true }}
           spaceBetween={10}
-          slidesPerView={5}
+          slidesPerView={4}
           loop={true}
           autoplay={{
             delay: 2500,
@@ -63,10 +63,10 @@ export const Home = () => {
               slidesPerView: 4,
             },
             992: { slidesPerView: 5 },
-            1200: { slidesPerView: 6 },
+            1200: { slidesPerView: 5 },
 
             1024: {
-              slidesPerView: 6,
+              slidesPerView: 5,
             },
           }}
           className="mySwiper pb-5"

@@ -76,7 +76,7 @@ export const Login = () => {
                       errors.email && <p className="text-danger">{errors.email?.message}</p> 
                  }
               </div>
-              <div className="mb-3">
+              <div className="mb-3 gap-3">
                 <input
                   type="password"
                   {...register("password" , {required:"password is required"})}
