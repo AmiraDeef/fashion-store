@@ -3,6 +3,8 @@ import axios from "axios"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { Link, useNavigate } from "react-router-dom"
+import { api } from "../api/axios";
+
 
 
 export const Register = () => {
@@ -12,11 +14,11 @@ export const Register = () => {
 
     async function onSubmit(data){
         try {
+              //just dummy
+            const response=await api.post("register",data)
+            console.log(response.data)
 
-            const response=await axios.post("https://erp.techsexperts.cloud/api/admins/register",data)
-            // console.log(response)
-
-             localStorage.setItem('token' , response.data.data.accessToken)
+             localStorage.setItem('token' , response.data.token)
              navigate("/")
 
         }catch (error) {
@@ -63,7 +65,7 @@ export const Register = () => {
               </a>
             </p>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="row mb-3">
+                <div className="row my-3">
               <div className="col-6 mb-3 gap-3">
                  <input
                   type="text"
@@ -78,7 +80,7 @@ export const Register = () => {
                 
                 />
                 {
-                      errors["fristName"] && <p className="text-danger">{errors["fristName"]?.message}</p> 
+                      errors["firstName"] && <p className="text-danger">{errors["firstName"]?.message}</p> 
                  }
                  </div>
                  <div className=" col-6 mb-3 gap-3">
@@ -100,7 +102,26 @@ export const Register = () => {
                  }
                  </div>
                 </div>
-                <div className="mb-3">
+                 <div className="mb-4">
+                <input
+                  type="text"
+                  className="form-control border-0 border-bottom"
+                  id="username"
+                    {...register("username" ,  {required : "username is required" , 
+                     pattern :{
+                        value : /^[A-Za-z0-9]+(?:[ _-][A-Za-z0-9]+)*$/,
+                        message : "Invalid userename"
+                     },
+                   
+                     })}
+                  placeholder="username"
+                  
+                />
+                {
+                      errors.username && <p className="text-danger">{errors.username?.message}</p> 
+                 }
+                </div>
+                <div className="mb-4">
                 <input
                   type="email"
                   className="form-control border-0 border-bottom"
@@ -119,12 +140,12 @@ export const Register = () => {
                       errors.email && <p className="text-danger">{errors.email?.message}</p> 
                  }
                 </div>
-              <div className="mb-4">
+              <div className="my-4">
                 <input
                   type="password"
                   {...register("password" , {required:"password is required",
                     pattern : {
-                        value : /^(?=^[ -~]{6,64}$)(?=.*([a-z][A-Z]))(?=.*[0-9])(.*[ -/|:-@|\[-`|{-~]).+$/,
+                       value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/,
                         message : "Minimum six characters, at least one letter and one number"
                     }
                   })}
@@ -136,20 +157,9 @@ export const Register = () => {
                       errors.password && <p className="text-danger">{errors.password?.message}</p> 
                  }
               </div>
-               <div className="mb-4">
-                <input
-                  type="password"
-                  {...register("confirmPassword" , {required:"Confirm password is required"})}
-                  className="form-control border-0 border-bottom"
-                  placeholder="confirm password"
-                  id="exampleInputPassword1"
-                />
-                {
-                      errors.confirmPassword && <p className="text-danger">{errors.confirmPassword?.message}</p> 
-                 }
-              </div>
               
-              <div className="mb-4 ">
+              
+              <div className="my-5 ">
 
               <button type="submit" className="btn btn-primary w-100">
                 Sign Up

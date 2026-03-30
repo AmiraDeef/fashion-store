@@ -3,6 +3,7 @@ import axios from "axios"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { Link, useNavigate } from "react-router-dom"
+import { api } from "../api/axios";
 
 
 export const Login = () => {
@@ -13,10 +14,10 @@ export const Login = () => {
     async function onSubmit(data){
         try {
 
-            const response=await axios.post("https://erp.techsexperts.cloud/api/admins/login",data)
-            // console.log(response)
+            const response=await api.post("login",data)
+            console.log(response.data)
 
-             localStorage.setItem('token' , response.data.data.accessToken)
+             localStorage.setItem('token' , response.data.token)
              navigate("/")
 
         }catch (error) {
