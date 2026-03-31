@@ -40,40 +40,40 @@ export const Navbar = () => {
                   </Link>
                 </li>
                 <li className="nav-item dropdown">
-                  <a
+                  <Link
                     className="nav-link fw-semibold"
-                    href="#"
+                    to="/products"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
                     Products
                     <i className="bi bi-chevron-down ms-1 fs-6 "></i>
-                  </a>
+                  </Link>
                   <ul className="dropdown-menu">
                     <li>
-                      <a className="dropdown-item" href="#">
-                        Action
-                      </a>
+                      <Link className="dropdown-item" to="/products">
+                        men
+                      </Link>
                     </li>
                     </ul>
                 </li>
                 <li className="nav-item dropdown">
-                  <a
+                  <Link
                     className="nav-link fw-semibold"
-                    href="#"
+                    to="/categories"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
                     Shop
                     <i className="bi bi-chevron-down ms-1"></i>
-                  </a>
+                  </Link>
                   <ul className="dropdown-menu">
                     <li>
-                      <a className="dropdown-item" href="#">
-                        Action
-                      </a>
+                      <Link className="dropdown-item" to="/categories">
+                        Category
+                      </Link>
                     </li>
                     
                   </ul>
@@ -89,7 +89,12 @@ export const Navbar = () => {
             </div>
             <div className="d-flex align-items-center gap-3 pb-1">
               <i className="bi bi-search fs-5 cursor-pointer"></i>
-              <i className="bi bi-person fs-5 cursor-pointer"></i>
+              <div className="account">
+                <Link to="/login" className="fs-6 fw-bold text-decoration-none text-dark d-inline-flex align-items-center">
+                <i className="bi bi-person fs-5 cursor-pointer"></i>
+                </Link>
+              </div>
+  
               <div className="position-relative">
                 <Link to="/cart" className="fs-6 fw-bold text-decoration-none text-dark d-inline-flex align-items-center">
                 <i className="bi bi-bag fs-5 cursor-pointer pe-3"></i>

@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-// import { Products } from "../pages/Products";
+import { Products } from "../pages/Products";
 import { Login } from "../pages/Login";
 import { Home } from "../pages/Home";
 import { Register } from "../pages/Register";
 import { Contact } from "../pages/Contact";
-// import { SingleProduct } from "../pages/SingleProduct";
+import { SingleProduct } from "../pages/SingleProduct";
 import { Layout } from "../layout/Layout";
 
 export const route = createBrowserRouter([
@@ -17,9 +17,10 @@ export const route = createBrowserRouter([
         element: <Home/>
       },   
         {path:'contact' , element:<Contact/>},
-            //   {path:'products' , element:<Products/>},
-            // // http://localhost:5173/products/id
-            // {path:'products/:id' , element:<SingleProduct/>},
+         {path:'products' , element:<Products/>},
+         { path: 'categories/:categoryName', element: <Products /> },
+          
+         {path:'products/:id' , element:<SingleProduct/>},
        
             
         ]

@@ -1,0 +1,12 @@
+.products{
+  padding-top: 100px;
+  margin-top: 100px;
+}
+
+.btn-overlay{
+    opacity: 0;
+}
+.product-top:hover .btn-overlay{
+    opacity: 1;
+    transform: translateY(0);
+}
