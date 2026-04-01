@@ -212,7 +212,7 @@ export const Home = () => {
 
 
 
-      <div className="instgram container py-5 overflow-hidden">
+      <div className="instgram container py-5 ">
         <div className="text-center mb-4">
           <p className=" text-muted mb-2 small fw-bold text-uppercase p-3">
             newsfeed

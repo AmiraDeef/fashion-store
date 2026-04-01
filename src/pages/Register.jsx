@@ -14,7 +14,7 @@ export const Register = () => {
 
     async function onSubmit(data){
         try {
-              //just dummy
+             
             const response=await api.post("register",data)
             console.log(response.data)
 

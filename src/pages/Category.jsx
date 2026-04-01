@@ -7,7 +7,7 @@ export const CategoryCard = ({ category }) => {
         <img 
           src={`http://localhost:8000/${category.image}`} 
           alt={category.name} 
-          className="w-100 h-100 object-fit-cover" 
+          className="w-100 h-100 object-fit-cover round-circle" 
         />
       </div>
       <h6 className="fw-bold">{category.name}</h6>

@@ -42,10 +42,11 @@ export const SingleProduct = () => {
                   Home
                 </Link>
               </li>
-              <li className="breadcrumb-item">
-                <Link to="/" className="text-muted text-decoration-none">
+              <li className="breadcrumb-item text-muted">
+                {/* <Link to="/" className="text-muted text-decoration-none">
                   {product?.categoryId?.name}
-                </Link>
+                </Link> */}
+                men
               </li>
               <li className="breadcrumb-item">
                 <Link to={`/categories/${product?.categoryId?._id}`} className="text-muted text-decoration-none">
