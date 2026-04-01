@@ -21,8 +21,8 @@ export const Login = () => {
              navigate("/")
 
         }catch (error) {
-           console.log(error.response.data.message)
-           setError(error.response.data.message)
+           console.log(error.response.data.msg)
+           setError(error.response.data.msg)
         }
     
     }
