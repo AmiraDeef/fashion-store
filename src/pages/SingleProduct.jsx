@@ -69,7 +69,7 @@ export const SingleProduct = () => {
               product.images?.map((img, index) => (
                 <img
                   key={index}
-                  src={`http://localhost:8000${img}`}
+                  src={`https://ecommerce-store-ashen-alpha.vercel.app${img}`}
                   alt={product.name}
                   className="object-fit-cover img-fluid mb-2 rounded-4 ms-2"
                   style={{

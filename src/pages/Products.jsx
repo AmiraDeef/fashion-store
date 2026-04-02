@@ -115,7 +115,7 @@ export const Products = () => {
                                                 }
 
                                                 <img
-                                                    src={`http://localhost:8000${item.images[0]}`}
+                                                    src={`https://ecommerce-store-ashen-alpha.vercel.app${item.images[0]}`}
                                                     className="w-100 h-100 object-fit-cover "
 
                                                 />

@@ -135,7 +135,7 @@ export const Home = () => {
                 <div className="position-relative rounded-4 overflow-hidden bg-light" style={{ height: "320px" }}>
 
                   <img
-                    src={`http://localhost:8000${item.images[0]}`}
+                    src={`https://ecommerce-store-ashen-alpha.vercel.app${item.images[0]}`}
                     className="w-100 h-100 object-fit-cover"
                     alt={item.name}
                   />
